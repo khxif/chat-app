@@ -36,7 +36,7 @@ export default function MessageInput() {
     }
     
     const uploadMessageToUpstash = async() => {
-      const res = await fetch(`api/addMessages`,{
+      const res = await fetch(`${process.env.VERCEL_URL || 'http://localhost:3000'}/api/addMessages`,{
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
