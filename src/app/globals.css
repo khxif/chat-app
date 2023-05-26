@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,body{
+    max-width: 100%;
+}
+
+@layer components{
+    .button{
+        @apply bg-blue-400 py-2 text-white rounded-md
+        px-4  hover:bg-blue-600 font-bold transition-all
+        duration-200
+    }
+}
