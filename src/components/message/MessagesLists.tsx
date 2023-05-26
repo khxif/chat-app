@@ -10,7 +10,7 @@ import { Message, MessageListsProps } from "../../../types";
 
 export default function MessagesLists({serverMessages}: MessageListsProps) {
 
-  const {data: messages, mutate, error } = useSWR('/api/getMessages',fetcher)
+  const {data: messages, mutate, error } = useSWR(`${process.env.VERCEL_URL || 'http://localhost:3000' }/api/getMessages`,fetcher)
   //console.log(messages);
   const {data: session} = useSession()
   //console.log(session);

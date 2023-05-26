@@ -9,7 +9,7 @@ import { fetcher } from "@/utils/fetchMessages ";
 
 export default function MessageInput() {
 
-  const {data: messages, mutate, error } = useSWR('/api/getMessages',fetcher)
+  const {data: messages, mutate, error } = useSWR(`${process.env.VERCEL_URL || 'http://localhost:3000' }/api/getMessages`,fetcher)
   //console.log(messages);
   
 
