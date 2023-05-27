@@ -9,7 +9,7 @@ import { fetcher } from "@/utils/fetchMessages ";
 
 export default function MessageInput() {
 
-  const {data: messages, mutate, error } = useSWR(`${process.env.VERCEL_URL || 'http://localhost:3000' }/api/getMessages`,fetcher)
+  const {data: messages, mutate, error } = useSWR(`/api/getMessages`,fetcher)
   //console.log(messages);
   
 
@@ -36,7 +36,7 @@ export default function MessageInput() {
     }
     
     const uploadMessageToUpstash = async() => {
-      const res = await fetch(`${process.env.VERCEL_URL || 'http://localhost:3000'}/api/addMessages`,{
+      const res = await fetch(`/api/addMessages`,{
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
