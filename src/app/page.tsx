@@ -4,7 +4,7 @@ import MessagesLists from "@/components/message/MessagesLists ";
 import { getServerSession } from "next-auth";
 
 export default async function Home() {
-  const res = await fetch(`${process.env.VERCEL_URL || 'http://localhost:3000' }/api/getMessages `)
+  const res = await fetch(`https://chat-app-khxif.vercel.app/api/getMessages `)
   const data = await res.json()
   //console.log(data.messages);
   

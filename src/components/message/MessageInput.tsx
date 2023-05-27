@@ -36,7 +36,7 @@ export default function MessageInput() {
     }
     
     const uploadMessageToUpstash = async() => {
-      const res = await fetch(`/api/addMessages`,{
+      const res = await fetch(`https://chat-app-khxif.vercel.app//api/addMessages`,{
         method: 'POST',
         headers: {
           "Content-Type": "application/json",

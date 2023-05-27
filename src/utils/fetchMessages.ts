@@ -2,7 +2,7 @@ import { Message } from "../../types";
 
 export const fetcher = async() => {
 
-  const res = await fetch(`${process.env.VERCEL_URL || 'http://localhost:3000'}/api/getMessages`);
+  const res = await fetch(`https://chat-app-khxif.vercel.app/api/getMessages`);
   const message = await res.json()
   const messages: Message[] = message.messages
 
